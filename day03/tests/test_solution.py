@@ -1,5 +1,6 @@
 import unittest
-from src.sol import solution_part1, find_all_numbers, find_all_symbols
+from src.sol import solution_part1, find_all_numbers, find_all_symbols, \
+    solution_part2
 
 
 class TestDay03(unittest.TestCase):
@@ -80,6 +81,20 @@ class TestDay03(unittest.TestCase):
     def test_all_periods_one_number(self):
         self.assertEqual(solution_part1(["......1....."]), 0)
 
+    def test_sample_input_part2(self):
+        part1_sample_input = [
+            "467..114..",
+            "...*......",
+            "..35..633.",
+            "......#...",
+            "617*......",
+            ".....+.58.",
+            "..592.....",
+            "......755.",
+            "...$.*....",
+            ".664.598.."
+        ]
+        self.assertEqual(solution_part2(part1_sample_input, debug=True), 467835)
 
 if __name__ == "__main__":
     unittest.main()
