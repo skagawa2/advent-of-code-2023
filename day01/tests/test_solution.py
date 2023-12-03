@@ -42,7 +42,7 @@ class TestDay01(unittest.TestCase):
 
     def test_singlelines_from_input(self):
         self.assertEqual(solution_part2_singleline("62sixone3"), 63)
-        self.assertEqual(solution_part2_singleline("onethreevgrhtnpdlvnjklqjqj1"), 11)
+        self.assertEqual(solution_part2_singleline("onethreevgrhtnpdlvnjklqjqj1"), 11)  # noqa
         self.assertEqual(solution_part2_singleline("hflhcmjjkmqn6six"), 66)
 
 
