@@ -39,21 +39,24 @@ class TestDay03(unittest.TestCase):
         input = ["..1.1",
                  ".-..."]
         self.assertEqual(find_all_symbols(input), [(1, 1)])
-        self.assertEqual(find_all_numbers(input), [(((0, 2), (0, 2)), 1), (((0, 4), (0, 4)), 1)])
+        self.assertEqual(find_all_numbers(input),
+                         [(((0, 2), (0, 2)), 1), (((0, 4), (0, 4)), 1)])
         self.assertEqual(solution_part1(input), 1)
 
     def test_number_at_end_of_line(self):
         input = ["...+..",
                  ".3..11"]
         self.assertEqual(find_all_symbols(input), [(0, 3)])
-        self.assertEqual(find_all_numbers(input), [(((1, 1), (1, 1)), 3), (((1, 4), (1, 5)), 11)])
+        self.assertEqual(find_all_numbers(input), [(((1, 1), (1, 1)), 3),
+                                                   (((1, 4), (1, 5)), 11)])
         self.assertEqual(solution_part1(input), 11)
 
     def test_newlines_arent_symbols(self):
         input = ["...+..\n",
                  ".3..11"]
         self.assertEqual(find_all_symbols(input), [(0, 3)])
-        self.assertEqual(find_all_numbers(input), [(((1, 1), (1, 1)), 3), (((1, 4), (1, 5)), 11)])
+        self.assertEqual(find_all_numbers(input), [(((1, 1), (1, 1)), 3),
+                                                   (((1, 4), (1, 5)), 11)])
         self.assertEqual(solution_part1(input), 11)
 
     def test_sample_input(self):
@@ -94,7 +97,9 @@ class TestDay03(unittest.TestCase):
             "...$.*....",
             ".664.598.."
         ]
-        self.assertEqual(solution_part2(part1_sample_input, debug=True), 467835)
+        self.assertEqual(solution_part2(part1_sample_input, debug=True),
+                         467835)
+
 
 if __name__ == "__main__":
     unittest.main()

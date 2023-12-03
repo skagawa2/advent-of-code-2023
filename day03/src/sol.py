@@ -71,7 +71,7 @@ def find_all_gears(lines: list[str], debug: bool = False) -> \
         list[tuple[int, int]]:
     answer = []
     for idx, single_line in enumerate(lines):
-        for match in re.finditer("\*", single_line.strip()):
+        for match in re.finditer(r"\*", single_line.strip()):
             beginning, _ = match.span()
             answer.append((idx, beginning))
     return answer
