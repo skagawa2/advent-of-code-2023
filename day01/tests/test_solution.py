@@ -45,5 +45,6 @@ class TestDay01(unittest.TestCase):
         self.assertEqual(solution_part2_singleline("onethreevgrhtnpdlvnjklqjqj1"), 11)
         self.assertEqual(solution_part2_singleline("hflhcmjjkmqn6six"), 66)
 
+
 if __name__ == "__main__":
     unittest.main()
